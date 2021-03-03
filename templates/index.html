@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>FLP</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file -->
+        <link rel="stylesheet" href="/static/css/production.css">
+        <!-- Bootstrap core CSS -->
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+
+    <body class="has-animations">
+
+    <div class="page-border">
+    <div class="bg--white" >
+
+        <!-- Header -->
+        <header class="align--center pt3 pb2">
+            <div class="container">
+                <h1 class="mb3 reveal-on-scroll is-revealing" title="FLP"><img src="/static/img/logo.png" alt="FLP"></h1>
+                <h1 class="mb3 reveal-on-scroll is-revealing text-primary">Find License plate characters in seconds</h1>
+                <img class="mb3" src="/static/img/lol.png">
+               
+            </div>
+        </header>
+
+        <!-- Body -->
+        <main>
+            <div class="container">
+                <h1 class="mb1 pt3 pb3 align--center">About this project</h1>
+                <h5 class = 'text-secondary'>A License plate is the unique most important identifier of a vehicle .The aim of this academic project is license Plate detection using state of the art computer vision and deep learning techniques.     
+                  <br> <br> <h5 class="mb1 align--center">The main 3 parts of the project are :</h5>
+                </h5>
+                <!-- Info -->
+                <section class="pt2 pb3">                    
+                   
+                    <div class="grid-row">
+                        
+                        <div class="grid-column span-one-third mt1 reveal-on-scroll is-revealing">
+                            <h3 class="mb1 align--center text-success">License Plate Detection</h3>
+                            <br><br><h4 class="mb1 align--center text-secondary">YoloV5m</h4>
+                        </div>
+                        <div class="grid-column span-one-third mt1 reveal-on-scroll is-revealing">
+                            <h3 class="mb1 align--center text-info">License Pate Segmentation</h3>
+                            <br><br><h4 class="mb1 align--center text-secondary">OpenCV</h4>
+                        </div>
+                        <div class="grid-column span-one-third mt1 reveal-on-scroll is-revealing">
+                            <h3 class="mb1 align--center text-warning">Optical Character Recognition</h3>
+                            <br><h4 class="mb1 align--center text-secondary">Tesseract</h4>
+                        </div>
+                    </div>
+                    <br> <h5 class="mb1 align--center text-danger"> You can View the source code on 
+                    <a href="https://github.com/PicoRadia/ALPR">  GitHub.</a>  </h5> 
+                </section>
+
+                <!-- Presenters -->
+                <section class="pt3 pb3 align--center">
+                    <h3 class="mb1">Contributors</h3>
+                    <br><br>
+                    <div class="grid-row">
+                        <div class="grid-column mb3">
+                            <h5 class="mb1 align--center text-danger">Author</h5>
+                            <img class="mb1" src="/static/img/radia.png" alt="Alyssa Long">
+                            <h4 class ='text-primary'>Radia EL HAMDOUNI</h4>
+                        </div>
+                        <div class="grid-column mb3">
+                            <h5 class="mb1 align--center text-danger">Author</h5>
+                            <img class="mb1" src="/static/img/lloyd.png" alt="Jonathan Foster">
+                            <h4 class ='text-primary'>Lloyd Mace</h4>
+                        </div>
+                        <div class="grid-column  mb3">
+                            <h5 class="mb1 align--center text-success">Supervising Teacher</h5>
+                            <img class="mb1" src="/static/img/jose.jpg" alt="KJose MENNESSON">
+                            <h4 class ='text-primary'>Jose MENNESSON</h4>
+                        </div>
+
+                        
+                    </div>
+                </section>
+                <h5 class ="text-danger">Special thanks to Professor Jose MENNESSON for his help,availability and support throught out this project.😀 </h5>
+
+                <!-- Sponsors -->
+                <section class="pt3 pb3 align--center">
+                    <h1 class="mb2 text-warning">Try Our Model</h1>
+                  
+                </section>
+         </div>
+        </main>  
+        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+       <form  action="/" method="POST" enctype="multipart/form-data">  
+        <div class="file-upload">
+          <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+      
+          <div class="image-upload-wrap">
+            <input class="file-upload-input" name = 'file' type='file' onchange="readURL(this);" accept="image/*" />
+
+            <div class="drag-text">
+              <h3>Drag and drop a file or select add Image</h3>
+            </div>
+          </div>
+          <div class="file-upload-content">
+            <img class="file-upload-images" src="#" alt="" />
+            <div class="image-title-wrap">
+              <button type="button" onclick="removeUpload()" class="remove-image">Remove</button>
+              <input type="submit" value="FLP"  class="upload-image" type="button" id=process_input /> 
+            </div>
+          </div>
+        </div>
+        </form>
+   
+        
+
+
+
+
+
+        <style>
+            body {
+          font-family: sans-serif;
+          background-color: #eeeeee;
+        }
+        
+        .file-upload {
+          background-color: #ffffff;
+          width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .file-upload-btn {
+          width: 100%;
+          margin: 0;
+          color: #fff;
+          background: #5bc0de ;
+          border: none;
+          padding: 10px;
+          border-radius: 4px;
+          border-bottom: 4px solid #5bc0de ;
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        
+        .file-upload-btn:hover {
+          background: #5bc0de ;
+          color: #ffffff;
+          transition: all .2s ease;
+          cursor: pointer;
+        }
+        
+        .file-upload-btn:active {
+          border: 0;
+          transition: all .2s ease;
+        }
+        
+        .file-upload-content {
+          display: none;
+          text-align: center;
+        }
+        
+        .file-upload-input {
+          position: absolute;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          opacity: 0;
+          cursor: pointer;
+        }
+        
+        .image-upload-wrap {
+          margin-top: 20px;
+          border: 4px dashed #5bc0de ;
+          position: relative;
+        }
+        
+        .image-dropping,
+        .image-upload-wrap:hover {
+          background-color: #5bc0de ;
+          border: 4px dashed #ffffff;
+        }
+        
+        .image-title-wrap {
+          padding: 0 15px 15px 15px;
+          color: #222;
+        }
+        
+        .drag-text {
+          text-align: center;
+        }
+        
+        .drag-text h3 {
+          font-weight: 100;
+          text-transform: uppercase;
+          color: #5bc0de ;
+          padding: 60px 0;
+        }
+        
+        .file-upload-image {
+          max-height: 200px;
+          max-width: 200px;
+          margin: auto;
+          padding: 20px;
+        }
+        .upload-image {
+          width: 200px;
+          margin: 0;
+          color: #fff;
+          background: #5cb85c ;
+          border: none;
+          padding: 10px;
+          border-radius: 4px;
+          border-bottom: 4px solid #5cb85c ;
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        
+        .upload-image:hover {
+          background: #5cb85c ;
+          color: #ffffff;
+          transition: all .2s ease;
+          cursor: pointer;
+        }
+        
+        
+        .remove-image {
+          width: 200px;
+          margin: 0;
+          color: #fff;
+          background:  #d9534f  ;
+          border: none;
+          padding: 10px;
+          border-radius: 4px;
+          border-bottom: 4px solid  #d9534f  ;
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        
+        .remove-image:hover {
+          background: #d9534f  ;
+          color: #ffffff;
+          transition: all .2s ease;
+          cursor: pointer;
+        }
+        
+        .remove-image:active {
+          border: 0;
+          transition: all .2s ease;
+        }
+        </style>
+        <script>
+            function readURL(input) {
+          if (input.files && input.files[0]) {
+        
+            var reader = new FileReader();
+        
+            reader.onload = function(e) {
+              $('.image-upload-wrap').hide();
+        
+              $('.file-upload-image').attr('src', e.target.result);
+              $('.file-upload-content').show();
+        
+              $('.image-title').html(input.files[0].name);
+            };
+        
+            reader.readAsDataURL(input.files[0]);
+        
+          } else {
+            removeUpload();
+          }
+        }
+        
+        function removeUpload() {
+          $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+          $('.file-upload-content').hide();
+          $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+        });
+        
+        </script>
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="mt2 pb3 align--center">
+            <ul class="no-bullets list--inline mb0">
+                <li class="m1 block-on-mobile"> IMT Lille Douai - 2021 </li>
+                
+                
+            </ul>
+            <p class="mt1 small text--gray">All rights reserved.</p>
+        </footer>
+
+    </div>
+    </div>
+
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- The compiled JavaScript file -->
+    <script src="/static/js/production.js"></script>
+
+    </body>
+</html>
